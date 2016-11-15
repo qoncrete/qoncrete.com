@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="{{ config.language }}" {% if page.dir == "rtl" %}dir="rtl"{% endif %}>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>{% block title %}{{ config.title }}{% endblock %}</title>
+        <meta content="always" name="referrer">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="generator" content="GitBook {{ gitbook.version }}">
+        {% if config.author %}<meta name="author" content="{{ config.author }}">{% endif %}
+        {% if config.isbn %}<meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">{% endif %}
+        {% block style %}
+            {% for resource in plugins.resources.css %}
+                {% if resource.url %}
+                <link rel="stylesheet" href="{{ resource.url }}">
+                {% else %}
+                <link rel="stylesheet" href="{{ resource.path|resolveAsset }}">
+                {% endif %}
+            {% endfor %}
+        {% endblock %}
+        {% block head %}{% endblock %}
+        <style>
+            .book-summary ul.summary li.chapter span{color:#ccc;}
+        </style>
+        <link rel="stylesheet" href="/static/gitbook-header.css">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ config.favicon }}">
+        <link rel="shortcut icon" href="{{ config.favicon }}" type="image/x-icon">
+    </head>
+    <body>
+
+        <div id="nav">
+            <a href="/index.html" class="left" style="line-height:0;height:58px"><img src="/static/logo.svg" style="height:39px;padding-top:19px;line-height:0"></a>
+            
+            <div class="left dropdown">Products &#x25BE;<div class="dropdown-options">
+                    <a href="/qoncrete-platform.html">Qoncrete Platform</a>
+                    <a href="#">Qoncrete White Label</a>
+                    <a href="#">Qoncrete Private</a>
+                </div>
+            </div>
+
+            <strong class="left">Resources</strong>
+
+            <a class="left" href="#">Customers</a>
+
+            <a href="" class="right">Login</a>
+
+            <div class="right dropdown">🇺🇸 English &#x25BE;<div class="dropdown-options">
+                    <a href="/">🇺🇸 English</a>
+                    <a href="/cn-ZH/">🇨🇳 中文</a>
+                    <a href="/fr-FR/">🇫🇷 Française</a>
+                    <a href="/fr-FR/">🇷🇺 Русский</a>
+                </div>
+            </div>
+
+        </div>
+
+        {% block body %}{% endblock %}
+        {% block javascript %}{% endblock %}
+    </body>
+</html>

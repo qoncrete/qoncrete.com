@@ -1,0 +1,13 @@
+{
+	"title": "Qoncrete Resources",
+	"description": "Qoncrete Resources, Documentation, Guides and more",
+	"favicon": "/static/favicon.png",
+	"language": "en",
+	"direction": "rtl",
+	"plugins": ["-sharing", "-fontsettings", "collapsible-menu"],
+	"pluginsConfig": {
+		"language-picker": {
+			"grid-columns": 2
+		}
+	}
+}

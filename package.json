@@ -1,0 +1,13 @@
+{
+  "name": "qoncrete.com",
+  "description": "Qoncrete introduction website, documentation, guides and other static contents",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "install": "gitbook install resources.md/",
+    "build": "gitbook build resources.md/ resources/"
+  },
+  "dependencies": {
+    "gitbook-plugin-toggle-chapters": "~0.0.3"
+  }
+}
