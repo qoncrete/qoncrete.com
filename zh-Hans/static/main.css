@@ -29,9 +29,8 @@ h2{font-size:22px;display:block;width:100%;text-align:center}
 .left.dropdown .dropdown-options, .left .dropdown .dropdown-options{left:0;right:auto;text-align:left}
 
 
-
 #footer{position:relative;background:#222;text-align:center;width:100%;}
-#footer small{line-height:58px;color:#fff;font-size:80%;}
+#footer *{line-height:58px;color:#666;font-size:100%;}
 
 
 .mobile-display{display:none !important}
@@ -39,4 +38,42 @@ h2{font-size:22px;display:block;width:100%;text-align:center}
 	.mobile-hide{display:none !important}
 	.mobile-display{display:block !important}
 	div,span{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;cursor:default}
+}
+
+
+
+@-webkit-keyframes rotateWord {
+	0% { opacity: 0; -webkit-transform: translateY(-30px)}
+	10% { opacity: 1; -webkit-transform: translateY(0px)}
+	90% { opacity: 1; -webkit-transform: translateY(0px)}
+	100% { opacity: 0; -webkit-transform: translateY(30px)}
+}
+@-ms-keyframes rotateWord {
+	0% { opacity: 0; -ms-transform: translateY(-30px)}
+	10% { opacity: 1; -ms-transform: translateY(0px)}
+	90% { opacity: 1; -ms-transform: translateY(0px)}
+	100% { opacity: 0; -ms-transform: translateY(30px)}
+}
+@keyframes rotateWord {
+	0% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px)}
+	10% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px)}
+	90% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px)}
+	100% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px)}
+}
+#rotate-words span{
+	display:inline-block;
+	width:100%;
+	white-space:nowrap;
+	text-align:center;
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	left:0;
+	color: #fff;
+	font-size:inherit;
+}
+#rotate-words span.active{
+	-webkit-animation: rotateWord 2.5s linear infinite 0s;
+	-ms-animation: rotateWord 2.5s linear infinite 0s;
+	animation: rotateWord 2.5s linear infinite 0s;
 }

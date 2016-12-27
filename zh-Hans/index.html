@@ -7,10 +7,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="format-detection" content="telephone=no">
 		<meta content="always" name="referrer">
-		<base href="/">
+		<!-- <base href="/"> -->
 		<link rel="icon" href="static/favicon.png">
 		<title>Qoncrete - Custom Analytics for Any Data Size</title>
-	    <meta name="description" content="Qoncrete - custom, self-service analytics for any data size">
+	    <meta name="description" content="Qoncrete - custom, self-service analytics for data-driven businesses">
 	    <meta name="keywords" content="">
 	    <link rel="stylesheet" href="static/main.css"> 
 	</head>
@@ -25,30 +25,27 @@
 		</a>
 
 		<div class="left dropdown">
-			Products &#x25BE;
+			产品 &#x25BE;
 			<div class="dropdown-options">
-				<a href="platform.html">Qoncrete Platform</a>
-				<a href="white-label.html">Qoncrete White Label</a>
-				<a href="private.html">Qoncrete Private</a>
+				<a href="features.html">产品功能概述</a>
+				<a href="platform.html">Qoncrete 平台</a>
+				<a href="white-label.html">Qoncrete OEM方案</a>
+				<a href="private.html">Qoncrete 本地部署方案</a>
 			</div>
 		</div>
 
 		<div class="left dropdown">
-			Resources &#x25BE;
+			资源 &#x25BE;
 			<div class="dropdown-options">
-				<a href="/resources/common/use-cases.html">Business & Product Use-cases</a>
-				<a href="/resources/common/">Common Concepts & Questions</a>
-				<a href="/resources/guides/">Developer Guides</a>
-				<a href="/resources/importing-data/">SDK/API Documentation</a>
-				<a href="/resources/corp/">Support & About Qoncrete</a>
+				<a href="/resources/common/use-cases.html">行业与产品用例 / 用户案例</a>
+				<a href="/resources/common/">常见概念与问题</a>
+				<a href="/resources/guides/">开发者指南</a>
+				<a href="/resources/importing-data/">SDK/API 文档中心</a>
+				<a href="/resources/corp/">支持 & 关于 Qoncrete</a>
 			</div>
 		</div>
 
-<!-- 		<a class="left" href="customers.html">Customers</a>
-		<a class="left" href="open-data.html">Open Data</a> -->
-
-		<a href="account/" class="right"><span class="mobile-hide">Login</span> &#128274;</a>
-
+		<a href="/account/?lang=chinese" class="right">&#128274; <span class="mobile-hide">登录</span></a>
 		<div class="right dropdown">🇨🇳 <span class="mobile-hide">中文</span> &#x25BE;<div class="dropdown-options">
 				<a href="/" hreflang="en-US">🇺🇸 English</a>
 				<strong>🇨🇳 中文</strong>
@@ -56,88 +53,108 @@
 				<!-- <a href="/fr-FR/">🇷🇺 Русский</a> -->
 			</div>
 		</div>
-
 		<div class="clear"></div>
 	</div>
 
-	<!-- <div class="section" style="position:relative;background:linear-gradient(135deg, #414345 0%, #232526 100%);"> -->
-	<div class="section" style="background:linear-gradient(135deg, #627280 0%, #eef2f3 100%);position:relative;overflow:hidden">
-		<br><br><br><br><br>
-		<h1 style="color:#fff">Custom Analytics<br>for Any Data Size</h1>
+
+	<div class="section" style="height:100%;background:#232731 url(static/welcome-page-top-background.jpg) no-repeat center;background-size:cover;position:relative;overflow:hidden">
+		<br><br><br><br><br><br><br><br><br>
+		<h1 style="color:#fff;font-weight:100">自定义数据分析平台<br>打造数据驱动的文化</h1>
 		<br><br>
-		<h2 style="color:#fff">Platform for long term data storage, real-time and predictive analytics</h2>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<img src="static/admin-ui.jpg" style="position:relative;margin:auto;position:absolute;bottom:-35px;left:75%;margin-left:-50%;width:50%">
+	<style>
+
+</style>
+
+		<h2 style="color:#fff;font-weight:100">以用户友好的方式解答您的
+			<div style="display: inline-block;width:160px;border-bottom:1px dashed rgba(255,255,255,0.2);position:relative;text-align:center" id="rotate-words">
+			&nbsp;
+				<span>业务</span>
+				<span>multi-dimension</span>
+				<span>tech</span>
+				<span>operation</span>
+				<span>financial</span>
+				<span>big data</span>
+				<span>performance</span>
+				<span>design</span>
+				<span>customer</span>
+				<span>what if</span>
+				<span>app crash</span>
+				<span>new</span>
+				<span>dificult</span>
+				<span>a/b</span>
+				<span>multi-metric</span>
+				<span>interesting</span>
+				<span>adhoc</span>
+				<span>boring</span>
+			</div>
+			问题：<br>实时、可追溯历史，可预测未来</h2>
+			<script>
+				(function(){
+					var items= document.getElementById('rotate-words').getElementsByTagName('span'), max= items.length, curr= -1
+					function rotate(){
+						if( items[curr] ) items[curr].className= ''
+						if( curr+1 >= max ) curr= -1
+						curr+= 1
+						items[curr].className= 'active'
+						setTimeout(rotate, 2500)
+					}
+					rotate()
+				})();
+			</script>
 	</div>
 
-	<div class="section" style="position:relative;background:#fff;">
-		<br><br><br><br><br><br><br><br>
-		<h1>Track Everything<br>at Limitless Scalability</h1>
-		<br><br><br>
-		<h2>Answer questions instantly, retroactively or predictably.</h2>
-		<br>
-		<h2>Start tracking, analyzing and correlating everything.</h2>
-		<br>
-		<h2>Scale easily to trillions events per second.</h2>
-		<!-- <br> -->
-		
-		<!-- <h2>Supercharge your product with programmatic data-driven decisions.</h2> -->
-		<!-- <br> -->
-		<!-- <h2>Collect, store, organize, analyze, predict and visualize<br>any way and any amount of data.</h2> -->
-		<br><br><br><br><br><br><br><br>
+	<div class="section" style="height:60%;background:#fff url(static/supercharge-analytics.png) no-repeat 15%;background-size:33%">
+		<div style="padding:12% 20% 0 50%;height:100%;background: url(static/welcome-background-box2.png) no-repeat 190% 70%;background-size:60%;">
+			<h2 style="text-align:left;">增强您的<strong>分析能力</strong></h2>
+			<br>
+			<big style="text-align:left;font-size:110%">Qoncrete支持海量数据的收集、存储、组织、分析及预测，并提供高性能的可视化数据能力。致力于打造低成本、快速、灵活、简单易用的数据分析平台。
+				<br><a style="color:#2c94f4;text-decoration:underline;" href="">详情请参阅产品功能概述。</a>
+			</big>
+		</div>
 	</div>
 
-	<div class="section" style="position:relative;background:#eef2f3;">
-		<br><br><br><br><br><br><br><br>
-		<h1>Data Visiblity<br>with Granual Access Control</h1>
-		<br><br><br>
-		<h2>Immediate actionable insights and programmatic data driven decision today.</h2>
-		<br><br><br>
-		<h2></h2>
-		<br><br><br><br><br><br><br><br>
+	<div class="section" style="height:60%;background:#f8f8f8 url(static/supercharge-product.png) no-repeat 85%;background-size:33%">
+		<div style="padding:12% 45% 0 25%;height:100%;background: url(static/welcome-background-box2.png) no-repeat -90% 100%;background-size:60%;">
+			<h2 style="text-align:left">优化您的<strong>产品</strong></h2>
+			<br>
+			<big style="text-align:left;font-size:110%">对公司产品获得更敏锐的洞察，做出程序化、数据驱动、实时的经营决策。
+				<br><a style="color:#2c94f4;text-decoration:underline;" href="">阅读开发人员文档。</a>
+			</big>
+		</div>
 	</div>
 
-	<div class="section" style="position:relative;background:#fff;text-align:center">
-		<br><br><br><br><br><br><br><br>
-		<h1>Cost-effective<br>Analytics</h1>
-		<br><br><br>
-		<h2>Collect, store, organize, analyze, predict, visualize and correlate<br>any way and any amount of data.</h2>
-		<br>
-		<h2>Qoncrete Cloud or On-Premises.</h2>
-		<br>
-		<a href="account/" style="text-align:center;color:#fff;font-size:200%;display:inline-block;margin:auto;padding:8px 18px;background:#ff9300;border:0px solid #ff6f00;border-radius:6px;width:42%">
-		Try Qoncrete Platform</a>
-<!-- 		<br>
-		<br>
-		<h2>Free 1GB Monthly. Free Signup.</h2>
- -->		
- 		<br><br><br><br><br><br><br><br><br><br><br>
+	<div class="section" style="height:60%;background:#fff url(static/supercharge-teams.png) no-repeat 15%;background-size:33%">
+		<div style="padding:12% 20% 0 50%;">
+			<h2 style="text-align:left">提升您的<strong>团队</strong></h2>
+			<br>
+			<big style="text-align:left;font-size:110%">在您的组织内实现数据民主化，并允许精细化的权限控制。
+				<br><a style="color:#2c94f4;text-decoration:underline;" href="">了解数据接入问题</a>
+			</big>
+		</div>
 	</div>
 
-<!-- 	<div class="section" style="position:relative;background:#fff;">
-		<h1 style="color:#444;padding-top:10%">key points (without title?)</h1>
-		<h2>security; reliability; scalability; control;<br>
-			Agility, cost-effective, faster / easier access, larger number of users, scalability / flexibility, reliability, maintance<br>
-			Company-wide data visiblity your way, immediate actionable insights and programmatic data driven decision<br>
-			Collaborative data visibility<br>
-			data democratization<br>
-			infrastucture for analysis<br>
-			store huge data in bulk and look at it retrospectively<br>
-			look at a granual level what happened weeks ago<br>
-		</h2>
-	</div>
-
-	<div class="section" style="background:#eef2f3;height:50%;text-align:center">
-		<h1 style="color:#444;padding-top:5%">In 60 Seconds or Less</h1>
+	<div class="section" style="position:relative;background:#f8f8f8;text-align:center">
+		<br><br><br><br><br><br><br><br><br>
+		<h2 style="font-weight:200">操作便捷，任何人都可以使用。</h2>
 		<br><br>
-		<span style="text-align:center;color:#444;font-size:200%;display:inline-block;margin:auto;padding:8px 18px;background:#eee;border:1px solid #ddd;border-radius:6px;width:42%">
-			See pricing and start your free trial.</span>
-	</div> -->
+		<a href="account/" style="border-top:1px solid #87c5ff;border-bottom:1px solid #537da5;text-align:center;color:#fff;font-size:160%;display:inline-block;margin:auto;padding:8px 18px;background:#2c94f4;border-radius:6px;width:42%">
+		Try our Free Public Beta</a>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
 
 	<div id="footer">
-		<br><br><br><br><br><br>
-		<small>&copy; 2009-2016 QONCRETE. All Rights Reserved.</small>
-		<br><br><br><br><br><br>
+		<br>
+		<div style="float:right;width:20%">
+			&copy; 2009-2016 Qoncrete.com
+		</div>
+		<div style="float:left;width:80%;text-align:left">
+			<a href="/resources/corp/support.html" style="margin-left:5%">Contact</a>
+			<a href="/resources/corp/team.html" style="margin-left:2%">Team</a>
+			<a href="/resources/corp/careers.html" style="margin-left:2%">Careers</a>
+			<a href="/resources/corp/terms-of-service.html" style="margin-left:2%">Terms</a>
+			<a href="/resources/corp/privacy.html" style="margin-left:2%">Privacy</a>
+		</div>
+		<br><br><br>
 	</div>
 
 </body>
