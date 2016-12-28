@@ -1,6 +1,6 @@
 # Our Story
 
-The core motivation for the development of Qoncrete was seeing how different departments within our fast growing startup are struggling with basically the same problem over and over again. Namely, the diversion of noticeable development time to handle collection, processing, analysis and presentation of data. As many bigger corporations eventually do, we decided to develop a single platform for all of our data, a place to easily analyze, correlate, and understand it, and thus our mission was born: "to allow teams at any scale to become data driven with zero development time".
+The core motivation for the development of Qoncrete was seeing how different departments within our fast growing startup are struggling with basically the same problem over and over again. Namely, the diversion of noticeable development time to handle collection, processing, analysis and presentation of data. As many bigger corporations eventually do, we decided to develop a single platform for all of our data, a place to easily analyze, correlate, and understand it.
 
 Developing Qoncrete at a fast growing startup in China was ideal: we had to deal with tens of billions of events, and tens of terabytes of raw data on a daily basis. The system had to be scalable, distributed, stable, cheap and, of course, easy to use for our non-technical colleagues, all from day one. It took us over 2 years of research to finally be able to satisfy all of the requierments.
 
