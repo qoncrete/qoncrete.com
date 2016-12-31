@@ -15,7 +15,4 @@ A report is a collection of data points, one or a billion, that allows to unders
  * __Metric (value) fields__ - fields containing the actual data for the calculations, for example a field called "price" could be summarized into a single daily value per country, city and user. Qoncrete support common functionalities like summary, average, unique count, minimum and maximum, first and last value, median and more. [Make sure to read about numbers accuracy and precision](accuracy-precision.md).
 
 
-Reports are always real time, with sometimes a tiny delay of a second or two for indexing. Qoncrete indexes all the fields in your report automatically, this allows for real time bi-directional sorting on any field as well extremely fast API access to your data, allowing you to create programatic products with data-driven decision making processes.
-
-
-Qoncrete also allows to combine multiple reports into a single table or a graph, [read more about panels here](panels-dashboards.md).
+Reports are always real time, with sometimes a tiny delay of a second or two for indexing. Qoncrete indexes all the fields in your report automatically, this allows for real time bi-directional sorting on any field, and a robust API access to your data, allowing you to create programatic products with data-driven decision making processes.

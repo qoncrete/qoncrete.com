@@ -4,7 +4,6 @@
 	* [What is Qoncrete](common/what-is-qoncrete.md)
 	* [Events and Retention](common/events-data-retention.md)
 	* [Sources and Reports](common/sources-reports.md)
-	* [Panels and Dashboards](common/panels-dashboards.md)
 	* [Accuracy and Precision](common/accuracy-precision.md)
 	* [Security and Reliability](common/security-reliability.md)
 	* [Data Access and API Keys](common/data-access-api-keys.md)
