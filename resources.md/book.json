@@ -3,7 +3,7 @@
 	"description": "Qoncrete Resources, Documentation, Guides and more",
 	"favicon": "/static/favicon.png",
 	"language": "en",
-	"direction": "rtl",
+	"direction": "ltr",
 	"plugins": ["-sharing", "-fontsettings", "collapsible-menu"],
 	"pluginsConfig": {
 		"language-picker": {
