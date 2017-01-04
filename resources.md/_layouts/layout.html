@@ -20,40 +20,46 @@
             {% endfor %}
         {% endblock %}
         {% block head %}{% endblock %}
+
         <style>
             .book-summary ul.summary li.chapter span{color:#ccc;}
         </style>
         <link rel="stylesheet" href="/static/gitbook-header.css">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ config.favicon }}">
-        <link rel="shortcut icon" href="{{ config.favicon }}" type="image/x-icon">
     </head>
     <body>
 
-        <div id="nav">
-            <a href="/index.html" class="left" style="line-height:0;height:58px"><img src="/static/logo.svg" style="height:39px;padding-top:19px;line-height:0"></a>
-            
-            <div class="left dropdown">Products &#x25BE;<div class="dropdown-options">
-                    <a href="/qoncrete-platform.html">Qoncrete Platform</a>
-                    <a href="#">Qoncrete White Label</a>
-                    <a href="#">Qoncrete Private</a>
-                </div>
+    <div id="nav">
+
+        <a id="logo" href="/index.html" class="left">
+            <img class="mobile-display" src="/static/favicon.png">
+            <img class="mobile-hide" src="/static/logo.svg">
+        </a>
+
+        <div class="left dropdown">
+            Products &#x25BE;
+            <div class="dropdown-options">
+                <a href="/features.html">Features Overview</a>
+                <a href="/platform.html">Qoncrete Platform</a>
+                <a href="/white-label.html">Qoncrete White Label</a>
+                <a href="/private.html">Qoncrete Private</a>
             </div>
-
-            <strong class="left">Resources</strong>
-
-            <a class="left" href="#">Customers</a>
-
-            <a href="" class="right">Login</a>
-
-            <div class="right dropdown">🇺🇸 English &#x25BE;<div class="dropdown-options">
-                    <a href="/">🇺🇸 English</a>
-                    <a href="/cn-ZH/">🇨🇳 中文</a>
-                    <a href="/fr-FR/">🇫🇷 Française</a>
-                    <a href="/fr-FR/">🇷🇺 Русский</a>
-                </div>
-            </div>
-
         </div>
+
+        <div class="left dropdown">
+            Resources &#x25BE;
+            <div class="dropdown-options">
+                <a href="/resources/common/use-cases.html">Business & Product Use-cases</a>
+                <a href="/resources/common/">Common Concepts & Questions</a>
+                <a href="/resources/guides/">Developer Guides</a>
+                <a href="/resources/importing-data/">SDK/API Documentation</a>
+                <a href="/resources/corp/">Support & About Qoncrete</a>
+            </div>
+        </div>
+
+        <a href="/account/" class="right">&#128274; <span class="mobile-hide">Login</span></a>
+
+        <div class="clear"></div>
+    </div>
 
         {% block body %}{% endblock %}
         {% block javascript %}{% endblock %}

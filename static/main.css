@@ -1,7 +1,7 @@
 html,body{height:100%;}
 *{
 	margin:0;padding:0;border:0;font:400 96% "Helvetica Neue", "Open Sans", Helvetica, Arial, sans-serif;
-	color:#444;line-height:1.3;letter-spacing: 0.5px;font-weight:300;
+	color:#111;line-height:1.3;letter-spacing: 0.5px;font-weight:300;
 	/*debug mode*/
 	/*box-shadow:inset 0 0 1px black*/
 }
