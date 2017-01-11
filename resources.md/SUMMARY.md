@@ -46,10 +46,10 @@
 	* [Bookmarks](analyzing-data/report-bookmarks.md)
 	* [Creating Dashboards](analyzing-data/creating-dashboards.md)
 	* [Predictions](analyzing-data/predictions.md)
-	* [JavaScript SDK](data-querying/javascript-sdk.md)
-		* [Querying SDK](data-querying/javascript-sdk.md)
-		* [Visualization SDK](data-visualization/javascript-sdk.md)
-	* [API](report-querying/api.md)
+	* [JavaScript SDK](analyzing-data/javascript-sdk.md)
+		* [Querying SDK](analyzing-data/javascript-sdk.md)
+		* [Visualization SDK](analyzing-data/javascript-sdk.md)
+	* [API](analyzing-data/api.md)
 
 
 * [Exporting Data](exporting-data/index.md)
