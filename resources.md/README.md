@@ -2,7 +2,7 @@
 
 ---
 
-Have more questions?  Spot a mistake? Contact us at contact@qoncrete.com
+Questions?  Spot a mistake? Contact us at contact@qoncrete.com
 
 ---
 
@@ -23,6 +23,7 @@ Have more questions?  Spot a mistake? Contact us at contact@qoncrete.com
 
 
 * [Guides](guides/index.md)
+<!---
 	* [White Label Analytics](guides/white-label-analytics.md)
 	* [A/B Testing](guides/ab-testings.md)
 	* [Ad-Network Reporting](guides/ad-network-reporting.md)
@@ -31,16 +32,16 @@ Have more questions?  Spot a mistake? Contact us at contact@qoncrete.com
 	* [IoT and Sensor Data](guides/iot-sensor-data.md)
 	* [Equities Trading](guides/equities-trading.md)
 	* [Real-Time Analytics](guides/real-time-analytics.md)
-
+--->
 
 * [Importing Data](importing-data/index.md)
-	* [File Upload](importing-data/file-upload.md)
+	<!--- * [File Upload](importing-data/file-upload.md) --->
 	* [JavaScript SDK](importing-data/javascript-sdk.md)
-	* [Mobile SDKs](importing-data/mobile-sdks.md)
-	* [Application SDKs](importing-data/application-sdks.md)
-	* [Server-Side](importing-data/server-side.md)
-	* [Database Connectors](importing-data/database-connectors.md)
-	* [Postbacks](importing-data/postbacks.md)
+	<!--- * [Mobile SDKs](importing-data/mobile-sdks.md) --->
+	<!--- * [Application SDKs](importing-data/application-sdks.md) --->
+	<!--- * [Server-Side](importing-data/server-side.md) --->
+	<!--- * [Database Connectors](importing-data/database-connectors.md) --->
+	<!--- * [Postbacks](importing-data/postbacks.md) --->
 	* [API](importing-data/api.md)
 	* [Error Codes](importing-data/error-codes.md)
 
@@ -53,7 +54,7 @@ Have more questions?  Spot a mistake? Contact us at contact@qoncrete.com
 	* [Creating Dashboards](analyzing-data/creating-dashboards.md)
 	* [JavaScript SDK](data-querying/javascript-sdk.md)
 		* [Querying SDK](data-querying/javascript-sdk.md)
-		* [Visualization SDK](data-visualization/javascript-sdk.md)
+		<!--- * [Visualization SDK](data-visualization/javascript-sdk.md) --->
 	* [API](report-querying/api.md)
 
 
