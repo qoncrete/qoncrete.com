@@ -18,7 +18,7 @@ Organizing different data streams into different their own respective collection
 
 ## Reports
 
-A report is the result of applying differnt functions to a collection of data points and optionally dispalying the result in a graphical way.  A very simple report could just display a single number: a counter of hourly or daily events, for example.  More complicated reports can be generated such as line graphs, pie charts, etc.  Reports can also be combined and compared with each other.
+A report is the result of applying different functions to a collection of data points and optionally dispalying the result in a graphical way.  A very simple report could just display a single number: a counter of hourly or daily events, for example.  More complicated reports can be generated such as line graphs, pie charts, etc.  Reports can also be combined and compared with each other.
 
 The creation of a report involves setting three options:
 
