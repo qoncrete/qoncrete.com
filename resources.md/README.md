@@ -2,7 +2,7 @@
 
 ---
 
-Links on the right side in light color are not yet ready, content for those is being composed and will be released as soon as possible. If you noticed a typo, mistake or would simply like to chat to us about anything contact us at contact@qoncrete.com
+Have more questions?  Spot a mistake? Contact us at contact@qoncrete.com
 
 ---
 

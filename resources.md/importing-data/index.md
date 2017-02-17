@@ -1,3 +1,3 @@
 # Importing / Streaming Data into Qoncrete
 
-In this section you can learn how to stream or bulk import your data into Qoncrete. Here you can find official SDKs and database connectors, and of course API documentation. If there's an SDK or connector missing, please contact us at support@qoncrete.com and we will try to come up with a solution for you.
+This section covers how to stream and/or bulk import data into Qoncrete; it contains official SDK and database connector information, as well as API documentation.  If there's a custom SDK or connector you'd like but isn't available, please contact us at [support@qoncrete.com](mailto:support@qoncrete.com?Subject=Qoncrete%20SDK%20Request) and we will work to develop a solution for you.

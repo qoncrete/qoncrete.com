@@ -1,7 +1,7 @@
 # Use Cases
 
 
-## Limited Example List
+## (Limited) Example List
 
  * Data center, server and application monitoring
  * Product Recommendations
@@ -27,4 +27,4 @@
 
 ## Real-time Analytics
 
-Virtually all data that contains time can be called time-series data. Multiple sources of data can be merged onto the same graph where X axis is time and Y can be multiple different values (counts, averages, dollars, etc). Qoncrete helps with this, allowing you to store, analyze  and predict petabytes of time-series data quickly at a much lower cost compared to anything currently available.
+Virtually all data that contains time can be considered time-series data. Multiple sources of data can be merged onto the same graph with the X axis labeled time and the Y axis a combination of multiple different values (counts, averages, dollars, etc). Qoncrete helps with this, allowing you to store, analyze  and predict petabytes of time-series data quickly at a much lower cost compared to anything currently available.

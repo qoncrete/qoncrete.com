@@ -2,7 +2,7 @@
 
 ## Accuracy
 
-Funcions like summary, average, minimum, maximum, first and last values are always correct. The only one with a slight error rate is unique count. Because unique counts can easily go into the millions and billions we are using an algorithm called HyperLogLog which allows for faster, more efficient calculations of unique items. Said that, you could always use the API to list out all group-by keys and create precise number.
+Funcions like sum, average, minimum, maximum, first and last values are always correct, minus any floating point restrictions. However, __unique counts__ may have a small error (e.g. less than 0.1%). For faster, more efficiant calculations over event collections that number into the millions or billions, Qoncrete makes use of [a version of HyperLogLog](http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/40671.pdf) for counting the number of unique items. If an exact number is required, the API can be used to list out all group-by keys allowing for the calculation of a precise number.
 
 ## Precision
 

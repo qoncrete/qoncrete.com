@@ -2,5 +2,5 @@
 
 ## support@qoncrete.com
 
-At the moment Qoncrete Platform doesn't differentiate between accounts and provide the same type of support: response within 12 hours during work days and 24 hours during weekend. If you would like to have a dedicated support engineer, please get in touch.
+The Qoncrete team will respond to support questions within 12 hours if posed during work days within 24 for those posed on weekends. If you require a dedicated support engineer, please get in touch with us.
 

@@ -1,10 +1,10 @@
 # Pricing, Payment and Limits
 
 ## Pricing
-Pricing is currently stands at 元0.8($0.1) RMB per GB per month, for raw event data and reports. Querying or exporting data cost 元0.4($0.05) per GB per month.
+Pricing is calculated by the amount of data __stored on__ and __transfered from__ Qoncrete.  Storage costs for users is 0.8 RMB (~$0.1) per GB per month for raw event data and reports. Querying or exporting data is 0.4 RMB (~$0.05) per GB per month.
 
 ## Payment
-Qoncrete Platform is a point based system. Points are pre-purchased per account, and deducted at the end of each day based on usage (average for storage and summarized for API bandwidth).
+Qoncrete is a point based system. Points are pre-purchased per account, and deducted at the end of each day based on usage (storage is averaged and API bandwidth is summed).
 
 ## Limits
-There are no limitations available at the moment. You can send, process and retrive as much data as you want.
+Currently there are no limitations. You can send, process and retrive as much data as you want.

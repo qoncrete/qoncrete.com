@@ -2,22 +2,22 @@
 
 ---
 
-This mainly concerns Qoncrete's cloud users, if you're running [Qoncrete privately](/running-on-premises/index.md), feel free to skip this section.
+This section concerns Qoncrete's cloud users, if you're running [Qoncrete privately](/running-on-premises/index.md), feel free to skip this section.
 
 ---
 
 ## Security
 
 ### Transmission
-All of our external communication with the Internet is using Symantec's TLS/SSL encyption. Internal communications are also TLS/SSL encypted.
+All of our external communication to the Internet uses Symantec's TLS/SSL encyption. Internal communications are also TLS/SSL encypted.
 
 
 ### Application
-All of our sources codes are compiled and encrypted before deployment, access to databases are locked behind access control systems. The database stores data in ecrypted format and transfer it over TLS/SSL encryption.
+All of our source code is compiled and encrypted before deployment. Access to databases are locked behind access control systems. The database stores data in ecrypted format and transfers over TLS/SSL connections.
 
 
 ### Hardware
-Our physical storage layer has Self-Encrypting Drive (SED) enabled -- that is, all data is encrypted physically. SED is a circuit built into the disk drive controller chip that encrypts all data.
+Our physical storage layer has Self-Encrypting Drive (SED) enabled -- that is, all data is also physically encrypted; a circuit built into the disk drive controller chip locally encrypts all data to the drive.
 
 
 ### Data Center and Network
@@ -25,7 +25,7 @@ All data is stored in our secure data centers with 24-hour security, biometric a
 
 
 ### Real Time Auditing
-Our hardware load balancers continuesly monitor and audit all access logs for potentional intrusions.
+Our hardware load balancers continuously monitor and audit all access logs for potentional intrusions.
 
 
 ### Vulnerability
@@ -36,4 +36,4 @@ Work in progress - third party vulnerability / penetration tests.
 All data is replicated at least 3 times across multiple datacenters. 
 
 
-Make sure you read about [Data Access Tokens](data-access-api-keys.md)
+Be sure to read about [Data Access Tokens](data-access-api-keys.md)

@@ -1,10 +1,11 @@
 # What is Qoncrete
 
+Qoncrete is a customizable data analytics tool that allows users to collect, store, organize, analyze, predict, and visualize data
+
 ## Key Points
 
- * Qoncrete is an end-to-end platform to collect, store, organize, analyze, predict and visualize data;
- * it is built and optimized to process massive amounts of data in real-time;
- * it is a multi tenant platform that can run on public and private clouds (on-premises);
- * it enables real-time programmatic data-driven decisions for any product;
- * it allows creation of custom (white label) analytics;
- * [see more use cases](use-cases.md)
+ * Built and optimized to process massive amounts of data in real-time
+ * Multi tenant platform that can run on public and private clouds (on-premises)
+ * Enables real-time programmatic data-driven decisions
+ * Allows creation of custom (white label) analytics
+ * See [use cases](use-cases.md)

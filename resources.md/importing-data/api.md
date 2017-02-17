@@ -1,6 +1,6 @@
 # Importing / Streaming Data via API
 
-When sending data an [API Token](/resources/common/data-access-api-keys.md) with write permission must be provided, otherwise the write will be rejected with 402 error. Source ID and body must be valid and not empty. The POST method is usually used for a back-end application, and GET method for front-end application, but it's a personal choice. Also keep in mind that some browser limit GET requests in length, agood rule of thumb is whenever your JSON is longer than 1024 charachters, use POST.
+When sending data, an [API Token](/resources/common/data-access-api-keys.md) with write permission must be provided, otherwise the request will be rejected with a 402 error. Both the source ID and body must be valid and not empty. An HTTP POST method is usually used for a back-end applications, while an HTTP GET  is commmon  for front-end applications, but it's not fixed. Some browsers limit GET requests in length; a good rule of thumb is that if your JSON is longer than 1024 charachters, use POST.
 
 ## POST via cURL
 ```bash
