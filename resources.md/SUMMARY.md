@@ -38,10 +38,12 @@
 
 * [Analyzing Data](analyzing-data/index.md)
 	* [Creating Report](analyzing-data/creating-report.md)
+	<!---
 		* [Enrich Data](analyzing-data/enrich-data.md)
 		* [Filters](analyzing-data/report-filters.md)
 		* [Dimensions](analyzing-data/report-dimensions.md)
 		* [Metrics](analyzing-data/report-metrics.md)
+	--->
 	* [Combining Reports](analyzing-data/combining-reports.md)
 	* [Bookmarks](analyzing-data/report-bookmarks.md)
 	* [Creating Dashboards](analyzing-data/creating-dashboards.md)

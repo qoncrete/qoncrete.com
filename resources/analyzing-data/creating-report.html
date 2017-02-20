@@ -54,7 +54,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="enrich-data.html" />
+    <link rel="next" href="combining-reports.html" />
     
     
     <link rel="prev" href="./" />
@@ -592,64 +592,6 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.1.1.1" data-path="enrich-data.html">
-            
-                <a href="enrich-data.html">
-            
-                    
-                    Enrich Data
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.1.2" data-path="report-filters.html">
-            
-                <a href="report-filters.html">
-            
-                    
-                    Filters
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.1.3" data-path="report-dimensions.html">
-            
-                <a href="report-dimensions.html">
-            
-                    
-                    Dimensions
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.1.4" data-path="report-metrics.html">
-            
-                <a href="report-metrics.html">
-            
-                    
-                    Metrics
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
         </li>
     
         <li class="chapter " data-level="4.1.2" data-path="combining-reports.html">
@@ -957,6 +899,362 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="creating-report">Creating Report</h1>
+<p>Steps to create a report:</p>
+<ol>
+<li><a href="#preprocessing-data">Preprocessing Data (optional)</a></li>
+<li><a href="#report-filters">Report Filters (optional)</a></li>
+<li><a href="#report-dimensions">Set Dimensions/Group-by (optional)</a></li>
+<li><a href="#report-metrics">Metrics (required)</a></li>
+</ol>
+<hr>
+<h2 id="report-preprocessing">Report Preprocessing</h2>
+<p>There are a number of functions you can apply to your data after collection and before analysis.  Preprocessing gives access to a larger set of functions to apply to your data during analysis.</p>
+<p>Currently, the supported preprocessing functions include:</p>
+<ul>
+<li>Parse User-Agent</li>
+<li>Parse URL</li>
+<li>Parse ISO Time</li>
+<li>IP to Geodata</li>
+<li>Key Exists</li>
+<li>Value Contains String</li>
+<li>Replace String</li>
+</ul>
+<p>The preprocessing function will be applied to the value of each event that contains the (user specified) key.</p>
+<p>Each preprocessing function gives the user a unique set of extended subkeys to work on in the data analysis stage.  Below are lists of which keys are added for which function. </p>
+<h3 id="parse-user-agent">Parse User-agent</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Added Keys </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.userAgent.family </td>
+</tr>
+<tr>
+<td style="text-align:left">.userAgent.version </td>
+</tr>
+<tr>
+<td style="text-align:left">.os.family </td>
+</tr>
+<tr>
+<td style="text-align:left">.os.version </td>
+</tr>
+<tr>
+<td style="text-align:left">.device.family </td>
+</tr>
+</tbody>
+</table>
+<h3 id="parse-url">Parse URL</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Added Keys </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.url</td>
+</tr>
+<tr>
+<td style="text-align:left">.scheme</td>
+</tr>
+<tr>
+<td style="text-align:left">.opaque</td>
+</tr>
+<tr>
+<td style="text-align:left">.user</td>
+</tr>
+<tr>
+<td style="text-align:left">.host</td>
+</tr>
+<tr>
+<td style="text-align:left">.path</td>
+</tr>
+<tr>
+<td style="text-align:left">.rawPath</td>
+</tr>
+<tr>
+<td style="text-align:left">.rawQuery</td>
+</tr>
+<tr>
+<td style="text-align:left">.fragment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parse-iso-time">Parse ISO Time</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Added Keys </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.year</td>
+</tr>
+<tr>
+<td style="text-align:left">.month</td>
+</tr>
+<tr>
+<td style="text-align:left">.day</td>
+</tr>
+<tr>
+<td style="text-align:left">.hour</td>
+</tr>
+<tr>
+<td style="text-align:left">.minute</td>
+</tr>
+<tr>
+<td style="text-align:left">.day_of_year</td>
+</tr>
+<tr>
+<td style="text-align:left">.quarter_of_year</td>
+</tr>
+<tr>
+<td style="text-align:left">.part_of_day  // possible values are morning, afternoon, evening, night</td>
+</tr>
+<tr>
+<td style="text-align:left">.meridiem     // possible values are ante, post</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ip-to-geodata">IP to Geodata</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Added Keys </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.country</td>
+</tr>
+<tr>
+<td style="text-align:left">.region</td>
+</tr>
+<tr>
+<td style="text-align:left">.city</td>
+</tr>
+<tr>
+<td style="text-align:left">.latitude</td>
+</tr>
+<tr>
+<td style="text-align:left">.longtitude</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-exists">Key Exists</h3>
+<p>This function checks if a key exists, and outputs the user specified string for either the positive or negative case.</p>
+<h3 id="key-contains-string">Key Contains String</h3>
+<p>This function checks if the key contains a particular string, and outputs the user specified string for either the positive or negative case.</p>
+<h3 id="replace-string">Replace String</h3>
+<p>This function outputs a key that is equal input key, but with the specified string replaced.</p>
+<hr>
+<h2 id="report-filters">Report Filters</h2>
+<p>After the preprocessing stage, filters can be applied to narrow down the number of events considered for analysis, or to remove unwanted data from the report, without modifying the actual data.</p>
+<hr>
+<h2 id="report-dimensions">Report Dimensions</h2>
+<hr>
+<h2 id="metrics-values">Metrics (Values)</h2>
+<p>All calues are calculated soratable in real time.</p>
+<h3 id="average">Average</h3>
+<h3 id="diff">Diff</h3>
+<h3 id="last">Last</h3>
+<h3 id="first">First</h3>
+<h3 id="max">Max</h3>
+<h3 id="min">Min</h3>
+<h3 id="sum">Sum</h3>
+<h3 id="count-unique">Count Unique</h3>
+<p>Counts all unique strings using HyperLogLog algorithm, with an error rate of 0.04%</p>
+<h3 id="expression">Expression</h3>
+<p>Allows for a more complex calculations like square root, logarithm, cosine, etc.</p>
+<h4 id="examples">Examples</h4>
+<pre><code>$0 / $0 * 100
+</code></pre><pre><code>sqrt($8)
+</code></pre><pre><code>((2 * 4 - 6 / 3) * (3 * 5 + 8 / 4)) - (2 + 3)
+</code></pre><h4 id="supported-operators">Supported operators</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Operator</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:center">assignment</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">addition</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">subtraction</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">division</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">multiply</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">power</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">remainder</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">bitwise and</td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td>bitwise or</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">bitwise xor</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&lt;</td>
+<td style="text-align:center">bitwise left shift</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;&gt;</td>
+<td style="text-align:center">bitwise right shift</td>
+</tr>
+<tr>
+<td style="text-align:center">~</td>
+<td style="text-align:center">bitwise not</td>
+</tr>
+<tr>
+<td style="text-align:center">==</td>
+<td style="text-align:center">equal</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:center">not equal</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">greater than</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:center">greater than or equal</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">less than</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:center">less than or equal</td>
+</tr>
+</tbody>
+</table>
+<h4 id="functions">Functions</h4>
+<p>Invoked like <code>max($0, $1)</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Function</th>
+<th style="text-align:center">Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">abs</td>
+<td style="text-align:center">1</td>
+<td>returns the absolute value of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">acos</td>
+<td style="text-align:center">1</td>
+<td>returns the arccosine of given number, in radians</td>
+</tr>
+<tr>
+<td style="text-align:center">sin</td>
+<td style="text-align:center">1</td>
+<td>returns the sine of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">cos</td>
+<td style="text-align:center">1</td>
+<td>returns the cosine of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">tan</td>
+<td style="text-align:center">1</td>
+<td>returns the tangent of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">asin</td>
+<td style="text-align:center">1</td>
+<td>returns the arcsine of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">acos</td>
+<td style="text-align:center">1</td>
+<td>returns the acosine of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">atan</td>
+<td style="text-align:center">1</td>
+<td>returns the arctangent of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">ceil</td>
+<td style="text-align:center">1</td>
+<td>function returns the smallest integer greater than or equal to a given number</td>
+</tr>
+<tr>
+<td style="text-align:center">floor</td>
+<td style="text-align:center">1</td>
+<td>returns the largest integer less than or equal to a given number</td>
+</tr>
+<tr>
+<td style="text-align:center">log</td>
+<td style="text-align:center">1</td>
+<td>returns the natural logarithm of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">max</td>
+<td style="text-align:center">2</td>
+<td>returns the larger of the two given numbers</td>
+</tr>
+<tr>
+<td style="text-align:center">min</td>
+<td style="text-align:center">2</td>
+<td>returns the smaller of the two given numbers</td>
+</tr>
+<tr>
+<td style="text-align:center">sqrt</td>
+<td style="text-align:center">1</td>
+<td>returns the square root of given number</td>
+</tr>
+<tr>
+<td style="text-align:center">rand</td>
+<td style="text-align:center">0</td>
+<td>returns a random float between 0.0 and 1.0</td>
+</tr>
+<tr>
+<td style="text-align:center">fact</td>
+<td style="text-align:center">1</td>
+<td>returns the factorial of  given number</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -989,7 +1287,7 @@
                 </a>
                 
                 
-                <a href="enrich-data.html" class="navigation navigation-next " aria-label="Next page: Enrich Data">
+                <a href="combining-reports.html" class="navigation navigation-next " aria-label="Next page: Combining Reports">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1000,7 +1298,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Creating Report","level":"4.1.1","depth":2,"next":{"title":"Enrich Data","level":"4.1.1.1","depth":3,"path":"analyzing-data/enrich-data.md","ref":"analyzing-data/enrich-data.md","articles":[]},"previous":{"title":"Analyzing Data","level":"4.1","depth":1,"path":"analyzing-data/index.md","ref":"analyzing-data/index.md","articles":[{"title":"Creating Report","level":"4.1.1","depth":2,"path":"analyzing-data/creating-report.md","ref":"analyzing-data/creating-report.md","articles":[{"title":"Enrich Data","level":"4.1.1.1","depth":3,"path":"analyzing-data/enrich-data.md","ref":"analyzing-data/enrich-data.md","articles":[]},{"title":"Filters","level":"4.1.1.2","depth":3,"path":"analyzing-data/report-filters.md","ref":"analyzing-data/report-filters.md","articles":[]},{"title":"Dimensions","level":"4.1.1.3","depth":3,"path":"analyzing-data/report-dimensions.md","ref":"analyzing-data/report-dimensions.md","articles":[]},{"title":"Metrics","level":"4.1.1.4","depth":3,"path":"analyzing-data/report-metrics.md","ref":"analyzing-data/report-metrics.md","articles":[]}]},{"title":"Combining Reports","level":"4.1.2","depth":2,"path":"analyzing-data/combining-reports.md","ref":"analyzing-data/combining-reports.md","articles":[]},{"title":"Bookmarks","level":"4.1.3","depth":2,"path":"analyzing-data/report-bookmarks.md","ref":"analyzing-data/report-bookmarks.md","articles":[]},{"title":"Creating Dashboards","level":"4.1.4","depth":2,"path":"analyzing-data/creating-dashboards.md","ref":"analyzing-data/creating-dashboards.md","articles":[]},{"title":"Predictions","level":"4.1.5","depth":2,"path":"analyzing-data/predictions.md","ref":"analyzing-data/predictions.md","articles":[]},{"title":"JavaScript SDK","level":"4.1.6","depth":2,"path":"analyzing-data/javascript-sdk.md","ref":"analyzing-data/javascript-sdk.md","articles":[{"title":"Querying SDK","level":"4.1.6.1","depth":3,"path":"analyzing-data/javascript-sdk.md","ref":"analyzing-data/javascript-sdk.md","articles":[]},{"title":"Visualization SDK","level":"4.1.6.2","depth":3,"path":"analyzing-data/javascript-sdk.md","ref":"analyzing-data/javascript-sdk.md","articles":[]}]},{"title":"API","level":"4.1.7","depth":2,"path":"analyzing-data/api.md","ref":"analyzing-data/api.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":2},"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"favicon":"/static/favicon.png","variables":{},"title":"Qoncrete Resources","language":"en","gitbook":"*","description":"Qoncrete Resources, Documentation, Guides and more","direction":"ltr"},"file":{"path":"analyzing-data/creating-report.md","mtime":"2017-02-14T10:49:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-17T09:16:59.406Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Creating Report","level":"4.1.1","depth":2,"next":{"title":"Combining Reports","level":"4.1.2","depth":2,"path":"analyzing-data/combining-reports.md","ref":"analyzing-data/combining-reports.md","articles":[]},"previous":{"title":"Analyzing Data","level":"4.1","depth":1,"path":"analyzing-data/index.md","ref":"analyzing-data/index.md","articles":[{"title":"Creating Report","level":"4.1.1","depth":2,"path":"analyzing-data/creating-report.md","ref":"analyzing-data/creating-report.md","articles":[]},{"title":"Combining Reports","level":"4.1.2","depth":2,"path":"analyzing-data/combining-reports.md","ref":"analyzing-data/combining-reports.md","articles":[]},{"title":"Bookmarks","level":"4.1.3","depth":2,"path":"analyzing-data/report-bookmarks.md","ref":"analyzing-data/report-bookmarks.md","articles":[]},{"title":"Creating Dashboards","level":"4.1.4","depth":2,"path":"analyzing-data/creating-dashboards.md","ref":"analyzing-data/creating-dashboards.md","articles":[]},{"title":"Predictions","level":"4.1.5","depth":2,"path":"analyzing-data/predictions.md","ref":"analyzing-data/predictions.md","articles":[]},{"title":"JavaScript SDK","level":"4.1.6","depth":2,"path":"analyzing-data/javascript-sdk.md","ref":"analyzing-data/javascript-sdk.md","articles":[{"title":"Querying SDK","level":"4.1.6.1","depth":3,"path":"analyzing-data/javascript-sdk.md","ref":"analyzing-data/javascript-sdk.md","articles":[]},{"title":"Visualization SDK","level":"4.1.6.2","depth":3,"path":"analyzing-data/javascript-sdk.md","ref":"analyzing-data/javascript-sdk.md","articles":[]}]},{"title":"API","level":"4.1.7","depth":2,"path":"analyzing-data/api.md","ref":"analyzing-data/api.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":2},"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"favicon":"/static/favicon.png","variables":{},"title":"Qoncrete Resources","language":"en","gitbook":"*","description":"Qoncrete Resources, Documentation, Guides and more","direction":"ltr"},"file":{"path":"analyzing-data/creating-report.md","mtime":"2017-02-20T07:31:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-20T07:33:28.937Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,123 +1,30 @@
-# Creating Report
-
-Steps to create a report:
-
-1. [Preprocessing Data (optional)](#preprocessing-data)
-2. [Report Filters (optional)](#report-filters)
-3. [Set Dimensions/Group-by (optional)](#report-dimensions)
-4. [Metrics (required)](#report-metrics)
-
----
-
-## Report Preprocessing
-
-There are a number of functions you can apply to your data after collection and before analysis.  Preprocessing gives access to a larger set of functions to apply to your data during analysis.
-
-Currently, the supported preprocessing functions include:
-* Parse User-Agent
-* Parse URL
-* Parse ISO Time
-* IP to Geodata
-* Key Exists
-* Value Contains String
-* Replace String
-
-The preprocessing function will be applied to the value of each event that contains the (user specified) key.
-
-Each preprocessing function gives the user a unique set of extended subkeys to work on in the data analysis stage.  Below are lists of which keys are added for which function. 
-
-### Parse User-agent
-| Added Keys 
-| :--- 
-| .userAgent.family 
-| .userAgent.version 
-| .os.family 
-| .os.version 
-| .device.family 
-
-### Parse URL
-| Added Keys 
-| :--- 
-| .url
-| .scheme
-| .opaque
-| .user
-| .host
-| .path
-| .rawPath
-| .rawQuery
-| .fragment
-
-### Parse ISO Time
-| Added Keys 
-| :--- 
-| .year
-| .month
-| .day
-| .hour
-| .minute
-| .day_of_year
-| .quarter_of_year
-| .part_of_day  // possible values are morning, afternoon, evening, night
-| .meridiem     // possible values are ante, post
-
-### IP to Geodata
-| Added Keys 
-| :--- 
-| .country
-| .region
-| .city
-| .latitude
-| .longtitude
-
-### Key Exists
-This function checks if a key exists, and outputs the user specified string for either the positive or negative case.
-
-### Key Contains String
-This function checks if the key contains a particular string, and outputs the user specified string for either the positive or negative case.
-
-### Replace String
-This function outputs a key that is equal input key, but with the specified string replaced.
-
----
-
-## Report Filters
-
-After the preprocessing stage, filters can be applied to narrow down the number of events considered for analysis, or to remove unwanted data from the report, without modifying the actual data.
-
----
-
-## Report Dimensions 
-
----
-
-## Metrics (Values)
+# Metrics (Values)
 
 All calues are calculated soratable in real time.
 
 
-### Average
+## Average
 
-### Diff
+## Diff
 
-### Last
+## Last
 
-### First
+## First
 
-### Max
+## Max
 
-### Min
+## Min
 
-### Sum
+## Sum
 
 
-### Count Unique
-Counts all unique strings using HyperLogLog algorithm, with an error rate of 0.04%
+## Count Unique
+Will count all unique strings using HyperLogLog algorithm, with an error rate of 0.04%
 
-### Expression
-Allows for a more complex calculations like square root, logarithm, cosine, etc.
+## Expression
+Expression function allows for a more complex calculations like square root, logarithm, cosine, and more.
 
-#### Examples
+### Examples
 
 ```
 $0 / $0 * 100
@@ -131,7 +38,7 @@ sqrt($8)
 ((2 * 4 - 6 / 3) * (3 * 5 + 8 / 4)) - (2 + 3)
 ```
 
-#### Supported operators
+### Supported operators
 
 | Operator   | Description           |
 |:----------:|:---------------------:|
@@ -155,7 +62,7 @@ sqrt($8)
 | <          | less than             |
 | <=         | less than or equal    |
 
-#### Functions
+### Functions
 Invoked like `max($0, $1)`
 
 | Function     | Arguments   | Description                                                                    |
@@ -176,4 +83,3 @@ Invoked like `max($0, $1)`
 | sqrt         | 1           | returns the square root of given number                                        |
 | rand         | 0           | returns a random float between 0.0 and 1.0                                     |
 | fact         | 1           | returns the factorial of  given number                                         |
-
