@@ -1,5 +1,5 @@
 # Support
 
-This page is a work in progress.
+Have questions?  
 
-Please contact us at support@qoncrete.com
+Get in touch with us at [support@qoncrete.com](mailto:support@qoncrete.com)

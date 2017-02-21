@@ -59,7 +59,6 @@
 
 * [On-Premises & Private Cloud](running-on-premises/index.md)
 
-
 * [Corp & Legal](corp/index.md)
 	* [About Qoncrete](corp/about.md)
 	* [Team](corp/team.md)
