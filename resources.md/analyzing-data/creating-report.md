@@ -3,13 +3,13 @@
 Steps to create a report:
 
 1. [Preprocessing Data (optional)](#preprocessing-data)
-2. [Report Filters (optional)](#report-filters)
-3. [Set Dimensions/Group-by (optional)](#report-dimensions)
-4. [Metrics (required)](#report-metrics)
+2. [Filters (optional)](#filters)
+3. [Group-by (optional)](#group-by)
+4. [Operations (required)](#operations)
 
 ---
 
-## Report Preprocessing
+## Preprocessing Data
 
 There are a number of functions you can apply to your data after collection and before analysis.  Preprocessing gives access to a larger set of functions to apply to your data during analysis.
 
@@ -26,7 +26,7 @@ The preprocessing function will be applied to the value of each event that conta
 
 Each preprocessing function gives the user a unique set of extended subkeys to work on in the data analysis stage.  Below are lists of which keys are added for which function. 
 
-### Parse User-agent
+#### Parse User-agent
 | Added Keys 
 | :--- 
 | .userAgent.family 
@@ -35,7 +35,7 @@ Each preprocessing function gives the user a unique set of extended subkeys to w
 | .os.version 
 | .device.family 
 
-### Parse URL
+#### Parse URL
 | Added Keys 
 | :--- 
 | .url
@@ -48,7 +48,7 @@ Each preprocessing function gives the user a unique set of extended subkeys to w
 | .rawQuery
 | .fragment
 
-### Parse ISO Time
+#### Parse ISO Time
 | Added Keys 
 | :--- 
 | .year
@@ -61,7 +61,7 @@ Each preprocessing function gives the user a unique set of extended subkeys to w
 | .part_of_day  // possible values are morning, afternoon, evening, night
 | .meridiem     // possible values are ante, post
 
-### IP to Geodata
+#### IP to Geodata
 | Added Keys 
 | :--- 
 | .country
@@ -70,54 +70,56 @@ Each preprocessing function gives the user a unique set of extended subkeys to w
 | .latitude
 | .longtitude
 
-### Key Exists
+#### Key Exists
 This function checks if a key exists, and outputs the user specified string for either the positive or negative case.
 
-### Key Contains String
+#### Key Contains String
 This function checks if the key contains a particular string, and outputs the user specified string for either the positive or negative case.
 
-### Replace String
+#### Replace String
 This function outputs a key that is equal input key, but with the specified string replaced.
 
 ---
 
-## Report Filters
+## Filters
 
 After the preprocessing stage, filters can be applied to narrow down the number of events considered for analysis, or to remove unwanted data from the report, without modifying the actual data.
 
 ---
 
-## Report Dimensions 
+## Group-by
+
+Group your event collecitons by different keys.  For example, one group-by can be country, followed by state, then city.  This allows you to "drill down" data to see increasingly specific data sets.
 
 ---
 
-## Metrics (Values)
+#### Operations
 
 All calues are calculated soratable in real time.
 
 
-### Average
+##### Average
 
-### Diff
+##### Diff
 
-### Last
+##### Last
 
-### First
+##### First
 
-### Max
+##### Max
 
-### Min
+##### Min
 
-### Sum
+##### Sum
 
 
-### Count Unique
+##### Count Unique
 Counts all unique strings using HyperLogLog algorithm, with an error rate of 0.04%
 
-### Expression
+##### Expression
 Allows for a more complex calculations like square root, logarithm, cosine, etc.
 
-#### Examples
+###### Examples
 
 ```
 $0 / $0 * 100
@@ -131,7 +133,7 @@ sqrt($8)
 ((2 * 4 - 6 / 3) * (3 * 5 + 8 / 4)) - (2 + 3)
 ```
 
-#### Supported operators
+##### Supported operators
 
 | Operator   | Description           |
 |:----------:|:---------------------:|
@@ -155,7 +157,7 @@ sqrt($8)
 | <          | less than             |
 | <=         | less than or equal    |
 
-#### Functions
+##### Functions
 Invoked like `max($0, $1)`
 
 | Function     | Arguments   | Description                                                                    |

@@ -12,7 +12,6 @@
 	* [Use Cases](common/use-cases.md)
 	* [Support](common/support.md)
 
-
 * [Guides](guides/index.md)
 	* [White Label Analytics](guides/white-label-analytics.md)
 	* [A/B Testing](guides/ab-testings.md)
@@ -22,7 +21,6 @@
 	* [IoT and Sensor Data](guides/iot-sensor-data.md)
 	* [Equities Trading](guides/equities-trading.md)
 	* [Real-Time Analytics](guides/real-time-analytics.md)
-
 
 * [Importing Data](importing-data/index.md)
 	* [File Upload](importing-data/file-upload.md)

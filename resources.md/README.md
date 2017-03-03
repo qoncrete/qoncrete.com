@@ -22,8 +22,7 @@ Questions?  Spot a mistake? Contact us at contact@qoncrete.com
 	* [Support](common/support.md)
 
 
-* [Guides](guides/index.md)
-<!---
+ <!--- * [Guides](guides/index.md) 
 	* [White Label Analytics](guides/white-label-analytics.md)
 	* [A/B Testing](guides/ab-testings.md)
 	* [Ad-Network Reporting](guides/ad-network-reporting.md)
@@ -58,18 +57,15 @@ Questions?  Spot a mistake? Contact us at contact@qoncrete.com
 	* [API](report-querying/api.md)
 
 
-* [Exporting Data](exporting-data/index.md)
+<!--- * [Exporting Data](exporting-data/index.md) --->
 
 
-* [On-Premises & Private Cloud](running-on-premises/index.md)
-* [Test Nonexist](corp/nonexistant.md)
-
-
+<!--- * [On-Premises & Private Cloud](running-on-premises/index.md) --->
 
 * [Corp & Legal](corp/index.md)
 	* [About Qoncrete](corp/about.md)
-	* [Team](corp/team.md)
+	<!--- * [Team](corp/team.md) --->
 	* [Support](corp/Support.md)
-	* [Careers](corp/Careers.md)
-	* [Terms of Service](corp/Terms of Service.md)
-	* [Privacy](corp/Privacy.md)
+	<!--- * [Careers](corp/Careers.md) --->
+	<!--- * [Terms of Service](corp/Terms of Service.md) --->
+	<!--- * [Privacy](corp/Privacy.md) --->
