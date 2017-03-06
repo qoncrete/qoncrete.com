@@ -24,7 +24,7 @@
 			<img class="mobile-hide" src="static/logo.svg">
 		</a>
 
-		<div class="left dropdown">
+<!-- 		<div class="left dropdown">
 			Products &#x25BE;
 			<div class="dropdown-options">
 				<a href="features.html">Features Overview</a>
@@ -32,9 +32,11 @@
 				<a href="white-label.html">Qoncrete White Label</a>
 				<a href="private.html">Qoncrete Private</a>
 			</div>
-		</div>
+		</div> -->
 
-		<strong class="left" href="pricing.html" class="right">Pricing</strong>
+		<a class="left" href="features.html" class="right">Features</a>
+
+		<strong class="left" class="right">Pricing</strong>
 
 		<div class="left dropdown">
 			Resources &#x25BE;
@@ -56,78 +58,96 @@
 		<div class="clear"></div>
 	</div>
 
+	<style>
+		.section .inner-box{width:50%;margin:auto;padding:10px;background:#fff;border-radius:24px}
+		@media (max-width:600px){
+			.section .inner-box{width:90%;}
+		}
 
-	<div class="section" style="z-index:0;height:100%;position:relative;background:#1a91ff;position:relative;overflow:hidden">
-		<br><br><br><br><br><br><br>
+	</style>
+	<div class="section" style="z-index:0;padding:5% 0;min-height:100%;position:relative;background:#1a91ff;position:relative;overflow:hidden">
+		<br><br><br>
 		<div style="z-index:11111"><h1 style="color:#fff;font-weight:100">Simple Pricing</h1></div>
-		<br><br>
-		<div style="width:50%;margin:auto;padding:10px;background:#fff;border-radius:24px">
+		<br><br><br>
+		<div class="inner-box">
 			<br>
 			<br>
 			<br>
-			<h2 style="color:#444;font-weight:200">
-				<span style="color:#444;display:inline-block;width:280px;text-align:left">Collect</span> <span style="font-size:80%;opacity:0.4">$</span>0.05 per GB Stored
-				<br><span style="font-size:65%;">On avearage $1 per 50 million events stored</span>
-			</h2>
+
+			<div style="width:80%;margin:auto;font-size:160%">
+				<span style="color:#444;display:inline-block;width:280px;text-align:left">Collect</span>
+				<span><span style="font-size:80%;opacity:0.4">$</span>0.05 per GB Stored</span>
+				<div style="font-size:65%;">On avearage $1 per 50 million events stored</div>
+				<div class="clear"></div>
+			</div>
 			
 			<br>
 			<br>
+			<div style="width:80%;margin:auto;font-size:160%">
+				<span style="color:#444;display:inline-block;width:280px;text-align:left">Analyze</span>
+				<span><span style="font-size:80%;opacity:0.4">$</span>0.30 per GB Stored</span>
+				<div style="font-size:65%;">Analyze collected data, and store results as live-reports</div>
+				<div class="clear"></div>
+			</div>
 
-			<h2 style="color:#444;font-weight:200">
-				<span style="color:#444;display:inline-block;width:280px;text-align:left">Analyze</span> <span style="font-size:80%;opacity:0.4">$</span>0.30 per GB Stored
-				<br><span style="font-size:65%;">Analyze collected data, and store results as live-reports</span>
-				</h2>
 			<br>
 			<br>
+			<div style="width:80%;margin:auto;font-size:160%">
+				<span style="color:#444;display:inline-block;width:280px;text-align:left">Query</span>
+				<span><span style="font-size:80%;opacity:0.4">$</span>0.08 per GB Retrieved</span>
+				<div style="font-size:65%;">Retrieve real-time results with permission-based access</div>
+				<div class="clear"></div>
+			</div>
 
-			<h2 style="color:#444;font-weight:200">
-				<span style="color:#444;display:inline-block;width:280px;text-align:left">Query</span> <span style="font-size:80%;opacity:0.4">$</span>0.08 per GB Sent
-				<br><span style="font-size:65%">API bandwidth out of Qoncrete</span>
-			</h2>
 			<br>
 			<br>
 			<br>
-
+			<br>
 		</div>
-		<div style="position:absolute;top:0;left:0;width:100%;height:100%;
-			background:#1a91ff url(static/welcome-background-box2.png) no-repeat 90% 10%;
-			background-size:2000px;z-index:-1;opacity:0.4;"></div>
-	<style>
-
-</style>
-
-
+		<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:#1a91ff url(static/welcome-background-box2.png) no-repeat 90% 10%;background-size:2000px;z-index:-1;opacity:0.4;"></div>
 	</div>
 
-	<div class="section" style="height:60%;background:#fff url(static/supercharge-analytics.png) no-repeat 15%;background-size:33%">
-		<div style="padding:12% 20% 0 50%;height:100%;background: url(static/welcome-background-box2.png) no-repeat 190% 70%;background-size:60%;">
-			<h2 style="text-align:left;">Supercharge Your <strong>Analytics</strong></h2>
-			<br>
-			<big style="text-align:left;font-size:110%">Collect, analyze, predict, and visualize any amount of data. Designed from the ground up to be cost-efficient, flexible, and fast.<br><a style="color:#2c94f4;text-decoration:underline;" href="">See features overview.</a></big>
+	<div class="section" style="min-height:40%;z-index:0;background-color:#fff;padding:5% 0;position: relative">
+		<div style="width:60%;margin:auto">
+			<h2 style="text-align:left;font-weight: bold">Collect</h2>
+			<div style="text-align:left;font-size:110%">
+				Collect event data, store it for a month or a hundred.
+				<br><a style="color:#2c94f4;text-decoration:underline;" href="">See features overview.</a>
+			</div>
 		</div>
+		<div style="position:absolute;top:0;left:0;width:100%;height:100%;background: url(static/welcome-background-box2.png) no-repeat 200px 150px;background-size:1400px;z-index:-1;opacity:1;"></div>
 	</div>
 
-	<div class="section" style="height:60%;background:#f8f8f8 url(static/supercharge-product.png) no-repeat 85%;background-size:33%">
-		<div style="padding:12% 45% 0 25%;height:100%;background: url(static/welcome-background-box2.png) no-repeat -90% 100%;background-size:60%;">
-			<h2 style="text-align:left">Supercharge Your <strong>Product</strong></h2>
-			<br>
-			<big style="text-align:left;font-size:110%">Gain actionable insights and make programmatic, data-driven, real-time decisions in your application.<br><a style="color:#2c94f4;text-decoration:underline;" href="">Read developer documentation.</a></big>
+
+	<div class="section" style="min-height:40%;z-index:0;background-color:#444;padding:5% 0;position: relative">
+		<div style="width:60%;margin:auto">
+			<h2 style="text-align:left;font-weight: bold;color:#fff">Analyze</h2>
+			<div style="text-align:left;font-size:110%;color:#fff">
+				Analyze your live streaming data in real time, or run analysis on historical data. Resulted data is stored on disk, and is constantly-updated with new incoming event data.
+				<br><a style="color:#2c94f4;text-decoration:underline;" href="/resources/analyzing-data/">Read data analysis documentation.</a>
+			</div>
 		</div>
+		<div style="position:absolute;top:0;left:0;width:100%;height:100%;background: url(static/welcome-background-box.png) no-repeat -800px -400px;background-size:1200px;z-index:-1;opacity:0.2;"></div>
 	</div>
 
-	<div class="section" style="height:60%;background:#fff url(static/supercharge-teams.png) no-repeat 15%;background-size:33%">
-		<div style="padding:12% 20% 0 50%;">
-			<h2 style="text-align:left">Supercharge Your <strong>Teams</strong></h2>
-			<br>
-			<big style="text-align:left;font-size:110%">Achive data democratization within your organization with granular, permission-based access control.<br><a style="color:#2c94f4;text-decoration:underline;" href="">Learn about data access.</a></big>
+
+	<div class="section" style="min-height:40%;z-index:0;background-color:#fff;padding:5% 0;position: relative">
+		<div style="width:60%;margin:auto">
+			<h2 style="text-align:left;font-weight: bold">Query</h2>
+			<div style="text-align:left;font-size:110%">
+				Create your own data visualizations, use Qoncrete's permission-based access control, enable programmatic, data-driven, and real-time decisions in your applications.
+				<br><a style="color:#2c94f4;text-decoration:underline;" href="">Learn about Qoncrete's API.</a>
+			</div>
 		</div>
+		<div style="position:absolute;top:0;left:0;width:100%;height:100%;background: url(static/welcome-background-box2.png) no-repeat 60% 100%;background-size:100%;z-index:-1;opacity:1;"></div>
 	</div>
+
 
 	<div class="section" style="position:relative;background:#f8f8f8;text-align:center">
 		<br><br><br><br><br><br><br><br><br>
-		<h2 style="font-weight:200">Simple enough for anyone to use.</h2>
+		<h2 style="font-weight:200">Cost effective storage, and analytics.</h2>
 		<br><br>
-		<a href="account/" style="border-top:1px solid #87c5ff;border-bottom:1px solid #537da5;text-align:center;color:#fff;font-size:160%;display:inline-block;margin:auto;padding:8px 18px;background:#2c94f4;border-radius:6px;width:42%">
+		<a href="account/" style="text-align:center;color:#fff;font-size:160%;display:inline-block;margin:auto;padding:12px 18px;background:#2c94f4;border-radius:42px;width:42%">
 		Try our Free Public Beta</a>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</div>
@@ -135,7 +155,7 @@
 	<div id="footer">
 		<br>
 		<div style="float:right;width:20%">
-			&copy; 2009-2016 Qoncrete.com
+			&copy; 2009-2017 Qoncrete.com
 		</div>
 		<div style="float:left;width:80%;text-align:left">
 			<a href="/resources/corp/support.html" style="margin-left:5%">Contact</a>
