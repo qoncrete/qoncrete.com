@@ -71,15 +71,16 @@ PATCH api.qoncrete.com/v3/report/:id // partial update
 	filters: [
 		{func: 'gt', type: 'time', args: ['_qtime', '2017-02-18T07:12:36.085Z']},
 		{func: 'gt', type: 'time', args: ['_qtime', 'now - 10d']},
-		{func: 'ne', key: 'geo.country', type: 'string', value: 'Japan'},
+		{func: 'ne', type: 'string', agrs: ['geo.country', 'Japan']},
 	],
 	groups: [
 									  // time.Round("Hour * 12").Format("31/12/2017 24:59")
 		{name: '12 Hours', func: 'intreval', args: ['Hour', 12]}, // // Year, Month, Day, Hour, Minute
-		{name: 'Country/City', func: 'concat', args: ['geo.country', '/', 'geo.city']},
+		{name: 'Country/City', func: 'concat', args: ['/', 'geo.country', 'geo.city']},
+		{name: 'Country/City', func: 'string', args: ['geo.country']},
 	],
 	operations: [
-		{name: 'Price (avg)', func: 'avg', key: 'pruce'},
+		{name: 'Price (avg)', func: 'avg', args: ['price']},
 	],
 	predictions: [
 		{model: 'simple_linear_regression', args: []},
@@ -101,28 +102,32 @@ PATCH api.qoncrete.com/v3/report/:id // partial update
 POST api.qoncrete.com/v3/report/:id/query?token=:id
 {
 	rows: {from: 0, to: 20},
-	sort: {column: 1, order: 'desc'},
-	// groups: ['2017-02-19', 'China,Beijing', 'David'],
-	columns: [1, 4, 5],
-	filters: [
-		{column: 0, func: 'lt', args: ['now - 1d']},
-		{column: 0, func: 'gt', args: ['2017-02-18T07:12:36.085Z']},
-		{column: 1, func: 'gte', args: [10]},
-		{column: 4, func: 'gte', args: [10]},
-		{column: 5, func: 'gte', args: [10]},
-	],
-
-	join: [
+	columns: [
 		{
-			joinType: 'left', // default left
-			report: 'UUID2',
-			columns: [1, 2],
+			index: 0,
+			sort: 'desc',
 			filters: [
-				{column: 2, func: 'gt', args: [10]},
+				{func: 'lt', args: ['now - 1d']},
+				{func: 'lt', args: ['now - 1d']}
+			]
+		},
+		{
+			index: 0,
+			filters: [
+				{func: 'gt', args: [0]},
+				{func: 'lt', args: [100]}
 			]
 		}
-	]
-	, save_as_query: true
+	],
+
+
+	// join: [
+	// 	{
+	// 		joinType: 'left', // default left
+	// 		report: 'UUID2',
+
+	// 	}
+	// ]
 }
 	> 200 OK {
 		rows: {
