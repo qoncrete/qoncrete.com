@@ -108,6 +108,8 @@ POST api.qoncrete.com/v3/report/:id/query?token=:id
 		{column: 0, func: 'lt', args: ['now - 1d']},
 		{column: 0, func: 'gt', args: ['2017-02-18T07:12:36.085Z']},
 		{column: 1, func: 'gte', args: [10]},
+		{column: 4, func: 'gte', args: [10]},
+		{column: 5, func: 'gte', args: [10]},
 	],
 
 	join: [
