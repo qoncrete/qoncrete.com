@@ -11,15 +11,13 @@ GET // get
 // Workspace
 GET api.qoncrete.com/v3/workspace/:id
 DELETE  api.qoncrete.com/v3/workspace/:id
-POST api.qoncrete.com/v3/workspace
 PUT api.qoncrete.com/v3/workspace/:id
 PATCH api.qoncrete.com/v3/workspace/:id
+
+POST api.qoncrete.com/v3/workspace
 {
 	name: '',
-	access: [
-		{account: 'UUID/email', access: 'view|create'}
-	],
-
+	// ???
 }
 	> 201 created { workspace: {} } // with id
 	> 4XX Error {
@@ -28,12 +26,22 @@ PATCH api.qoncrete.com/v3/workspace/:id
 	}
 
 
+// Workspace access
+GET api.qoncrete.com/v3/workspace/:id
+DELETE  api.qoncrete.com/v3/workspace/:id
+POST api.qoncrete.com/v3/workspace
+{
+	grant_access_to: 'user@host.com',
+	access_type: 'read-only' // read-only | unlimited 
+}
+
 // Source
 GET api.qoncrete.com/v3/source/:id
 DELETE  api.qoncrete.com/v3/source/:id
+PUT api.qoncrete.com/v3/source/:id
+PATCH api.qoncrete.com/v3/source/:id
+
 POST api.qoncrete.com/v3/source // create
-PUT api.qoncrete.com/v3/source/:id // replace/update
-PATCH api.qoncrete.com/v3/source/:id // partial update
 {
 	workspace: 'UUID',
 	name: '',
@@ -55,9 +63,9 @@ PATCH api.qoncrete.com/v3/source/:id // partial update
 // Report
 GET api.qoncrete.com/v3/report/:id
 DELETE  api.qoncrete.com/v3/report/:id
-POST api.qoncrete.com/v3/report // create
-PUT api.qoncrete.com/v3/report/:id // replace
-PATCH api.qoncrete.com/v3/report/:id // partial update
+PUT api.qoncrete.com/v3/report/:id
+PATCH api.qoncrete.com/v3/report/:id
+POST api.qoncrete.com/v3/report
 {
 	source: 'UUID',
 	name: 'test', // updating name only, doesn't require rebuild
@@ -75,11 +83,13 @@ PATCH api.qoncrete.com/v3/report/:id // partial update
 	],
 	groups: [
 									  // time.Round("Hour * 12").Format("31/12/2017 24:59")
-		{name: '12 Hours', func: 'intreval', args: ['Hour', 12]}, // // Year, Month, Day, Hour, Minute
+		{name: '12 Hours', func: 'intreval', args: ['Hour', 12]}, // Year, Month, Day, Hour, Minute
 		{name: 'Country/City', func: 'concat', args: ['/', 'geo.country', 'geo.city']},
 		{name: 'Country/City', func: 'string', args: ['geo.country']},
 	],
 	operations: [
+		// default, event count
+		// default, unique sub-group count
 		{name: 'Price (avg)', func: 'avg', args: ['price']},
 	],
 	predictions: [
@@ -98,25 +108,30 @@ PATCH api.qoncrete.com/v3/report/:id // partial update
 
 
 // Query
-// Token is either read token, or query token
+// Token is either master_read token, or query token
 POST api.qoncrete.com/v3/report/:id/query?token=:id
 {
 	rows: {from: 0, to: 20},
+	// groups: ['31/12/2017 24:00', 'China,Beijing', 'David'],
 	columns: [
 		{
 			index: 0,
 			sort: 'desc',
 			filters: [
-				{func: 'lt', args: ['now - 1d']},
-				{func: 'lt', args: ['now - 1d']}
+				{func: 'lt', args: ['now']},
+				{func: 'gt', args: ['now - 1d']}
 			]
 		},
 		{
-			index: 0,
+			index: 1,
 			filters: [
 				{func: 'gt', args: [0]},
 				{func: 'lt', args: [100]}
 			]
+		},
+		{
+			index: 2,
+			return: false
 		}
 	],
 
@@ -146,7 +161,8 @@ GET api.qoncrete.com/v3/store/query/:id
 DELETE api.qoncrete.com/v3/store/query/:id
 POST api.qoncrete.com/v3/store/query
 {
-	// same as report/query
+	name: 'query token name'
+	// query config, same as api/report/:id/query
 }
 
 
