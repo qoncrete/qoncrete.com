@@ -145,14 +145,17 @@ POST api.qoncrete.com/v3/report/:id/query?token=:id
 	// ]
 }
 	> 200 OK {
-		rows: {
+		rows: [
 			['2017-02-19', 11, 6, 19, 23, 565],
 			['2017-02-19', 11, 6, 19, 23, 565],
 			['2017-02-19', 11, 6, 19, 23, 565],
-		]
+		],
+		hasMore: false
 	}
 	> 4XX Error {
-		error: {}
+		error: {
+		
+		}
 	}
 
 
