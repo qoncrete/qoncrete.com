@@ -112,26 +112,26 @@ POST api.qoncrete.com/v3/report
 POST api.qoncrete.com/v3/report/:id/query?token=:id
 {
 	rows: {from: 0, to: 20},
-	// groups: ['31/12/2017 24:00', 'China,Beijing', 'David'],
+	//groups: ['31/12/2017 24:00', ['China,Beijing'], ['David']],
 	columns: [
 		{
-			index: 0,
+			index: -1,
 			sort: 'desc',
 			filters: [
-				{func: 'lt', args: ['now']},
-				{func: 'gt', args: ['now - 1d']}
+				{func: 'lte', arg: 'now'},
+				{func: 'gte', arg: 'now - 1d'}
 			]
 		},
 		{
 			index: 1,
 			filters: [
-				{func: 'gt', args: [0]},
-				{func: 'lt', args: [100]}
+				{func: 'gt', arg: 0},
+				{func: 'lt', arg: 100}
 			]
 		},
 		{
 			index: 2,
-			return: false
+			hide: true
 		}
 	],
 
