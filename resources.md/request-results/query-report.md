@@ -110,7 +110,7 @@ An `index` larger than 1 represents the value user defined in the report.
 
 `sort` defines the order in which to return the results. Valid values are 'asc' (for ascending) or 'desc' (for descending).
 
-`sort` is **"desc"** by default.
+`sort` is **""** by default, which means no need to sort on this column.
 
 #### hide
 
