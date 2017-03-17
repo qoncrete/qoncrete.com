@@ -42,7 +42,8 @@ Here is an example query that includes all three possible parameters in the requ
 	[ ["key2"], 19,28,32,3,80]
     ],
     "hasMore": false
-}```
+}
+```
 
 
 ## Request Struct Parameters
