@@ -37,12 +37,38 @@
 
 ```json
 {
-    "groups": [["2017-02-16T16:00:00.000Z"], ["US"],["Chicago"],
+    "groups": [["2017-02-16T16:00:00.000Z"], ["US"],["Chicago"]],
     "columns": [
         {
-            "index": -1,
+            "index": -1
         }
     ]
+}
+```
+
+Response
+
+```json
+{
+  "rows": [
+    [
+      [
+        "Adults"
+      ],
+      50,
+      48,
+      9000
+    ],
+    [
+      [
+        "Children"
+      ],
+      50,
+      2,
+      1000
+    ]
+  ],
+  "hasMore": false
 }
 ```
 
@@ -65,6 +91,23 @@
 }
 ```
 
+Response
+
+```json
+{
+  "rows": [
+    [
+      [
+        "Chicago"
+      ],
+      100,
+      50,
+      10000
+    ]
+  ],
+  "hasMore": false
+}
+```
 
 ### Return first 20 entries minus column corresponding to "Unique Keys"
 
