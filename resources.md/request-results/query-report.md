@@ -43,7 +43,6 @@ Here is an example query that includes all three possible parameters in the requ
     "hasMore": false
 }```
 
-
 ## Request Struct Parameters
 
 ### groups
