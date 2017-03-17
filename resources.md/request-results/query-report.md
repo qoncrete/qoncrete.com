@@ -51,6 +51,7 @@ Here is an example query that includes all three possible parameters in the requ
 ### groups
 
 This parameter signifies the 'group by' key values. 
+
 `groups` is **[]** by default.
 
 The length of `groups` identifies which level you are searching for.
@@ -69,6 +70,7 @@ Which will return the latest N records in descendant order of time.
 ### rows
 
 `rows` indicates the data range you want. 
+
 `rows` is **{"from": 0, "to": 20}** by default.
 
 For example, if you want to get latest 100 records, you can add a `rows` obj as follows:
@@ -82,6 +84,7 @@ For example, if you want to get latest 100 records, you can add a `rows` obj as 
 ### columns
 
 `columns` allows you to customize the query results.  
+
 `columns` is **[]** by default.
 
 It has attributes: `index`, `sort`, `hide` and `filters`.
@@ -89,7 +92,10 @@ It has attributes: `index`, `sort`, `hide` and `filters`.
 #### index
 
 `index` represents the sequence of the field. 
-`index` is **0** by default. For it is very very important, please keep in mind to **set the index correctly**.
+
+`index` is **0** by default. 
+
+For it is very very important, please keep in mind to **set the index correctly**.
 
 An `index` of -1 represents the 'id', i.e. the key of the record. 
 
