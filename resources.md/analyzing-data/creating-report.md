@@ -89,13 +89,17 @@ After the preprocessing stage, filters can be applied to narrow down the number 
 
 ## Group-by
 
-Group your event collecitons by different keys.  For example, one group-by can be country, followed by state, then city.  This allows you to "drill down" data to see increasingly specific data sets.
+Group your event collections by different keys. The more group-bys, the more data levels you will get. 
+
+By default, time is the key for level 0 data, and this level can't be dropped. All user-defined group-bys will start from level 1.
+
+For example, you may have a report grouped by country , followed by state, then city. This allows you to "drill down" the final report data from 'time' into 'country', then 'state', finally into 'city'. You can get increasingly specific data sets as you will.
 
 ---
 
 #### Operations
 
-All calues are calculated soratable in real time.
+All values are calculated in real time.
 
 
 ##### Average
