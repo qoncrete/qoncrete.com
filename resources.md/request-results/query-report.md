@@ -37,11 +37,11 @@ Here is an example query that includes all three possible parameters in the requ
 
 ```json
 {
-    "rows": [
-    	[ ["key1"], 9,8,2,4,10],
-	[ ["key2"], 19,28,32,3,80]
-    ],
-    "hasMore": false
+	"rows": [
+		[ ["key1"], 9,8,2,4,10],
+		[ ["key2"], 19,28,32,3,80]
+	],
+	"hasMore": false
 }
 ```
 
