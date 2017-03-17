@@ -123,14 +123,14 @@ POST api.qoncrete.com/v3/report/:id/query?token=:id
 			]
 		},
 		{
-			index: 1,
+			index: 0,
 			filters: [
 				{func: 'gt', arg: 0},
 				{func: 'lt', arg: 100}
 			]
 		},
 		{
-			index: 2,
+			index: 1,
 			hide: true
 		}
 	],
@@ -146,9 +146,9 @@ POST api.qoncrete.com/v3/report/:id/query?token=:id
 }
 	> 200 OK {
 		rows: [
-			['2017-02-19', 11, 6, 19, 23, 565],
-			['2017-02-19', 11, 6, 19, 23, 565],
-			['2017-02-19', 11, 6, 19, 23, 565],
+			[['2017-02-19'], 11, 6, 19, 23, 565],
+			[['2017-02-20'], 101, 61, 109, 123, 5.65],
+			[['2017-02-21'], 110, 16, 190, 213, 56.5],
 		],
 		hasMore: false
 	}
