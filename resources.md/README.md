@@ -56,8 +56,9 @@ Questions?  Spot a mistake? Contact us at contact@qoncrete.com
 		<!--- * [Visualization SDK](data-visualization/javascript-sdk.md) --->
 	* [API](report-querying/api.md)
 
-
-<!--- * [Exporting Data](exporting-data/index.md) --->
+* [Requesting Results](request-results/index.md)
+	* [Querying a Report](request-results/query-report.md)
+	* [Examples](request-results/query-report-examples.md)
 
 
 <!--- * [On-Premises & Private Cloud](running-on-premises/index.md) --->
