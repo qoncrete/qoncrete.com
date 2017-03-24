@@ -68,11 +68,7 @@ PATCH api.qoncrete.com/v3/report/:id
 POST api.qoncrete.com/v3/report
 {
 	source: 'UUID',
-	name: 'test', // updating name only, doesn't require rebuild
-	retention: [
-		{func: 'lt', type: 'time', args: ['_qtime', '2017-02-18T07:12:36.085Z']},
-		{func: 'gte', type: 'time', args: ['_qtime', '2017-02-18T07:12:36.085Z']},
-	],
+	name: 'test', // updating name only (without rebuild)
 	preprocesses: [
 		{func: 'ip2geo', args: ['ip', 'geo']},
 	],
@@ -83,18 +79,19 @@ POST api.qoncrete.com/v3/report
 	],
 	groups: [
 									  // time.Round("Hour * 12").Format("31/12/2017 24:59")
-		{name: '12 Hours', func: 'intreval', args: ['Hour', 12]}, // Year, Month, Day, Hour, Minute
+									  // interval(Time-unit, cycles, retain)
+		{name: '12 Hours', func: 'interval', args: ['Minute', 1, 10]}, // Year, Month, Day, Hour, Minute
 		{name: 'Country/City', func: 'concat', args: ['/', 'geo.country', 'geo.city']},
 		{name: 'Country/City', func: 'string', args: ['geo.country']},
 	],
 	operations: [
-		// default, event count
-		// default, unique sub-group count
+		// $0 default, event count
+		// $1 default, unique sub-group count
 		{name: 'Price (avg)', func: 'avg', args: ['price']},
 	],
-	predictions: [
-		{model: 'simple_linear_regression', args: []},
-	],
+	// predictions: [
+	// 	{model: 'simple_linear_regression', args: []},
+	// ],
 }
 
 	> 201 Created { report: {} } // with id
