@@ -51,6 +51,10 @@
 		* [Visualization SDK](analyzing-data/javascript-sdk.md)
 	* [API](analyzing-data/api.md)
 
+* [Requesting Results](request-results/index.md)
+	* [Querying a Report](request-results/query-report.md)
+	* [Examples](request-results/query-report-examples.md)
+
 
 * [Exporting Data](exporting-data/index.md)
 
