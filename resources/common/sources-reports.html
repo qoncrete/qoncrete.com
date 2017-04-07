@@ -74,7 +74,7 @@
             <img class="mobile-display" src="/static/favicon.png">
             <img class="mobile-hide" src="/static/logo.svg">
         </a>
-
+<!--
         <div class="left dropdown">
             Products &#x25BE;
             <div class="dropdown-options">
@@ -84,14 +84,17 @@
                 <a href="/private.html">Qoncrete Private</a>
             </div>
         </div>
-
+-->
         <div class="left dropdown">
             Resources &#x25BE;
             <div class="dropdown-options">
-                <a href="/resources/common/use-cases.html">Business & Product Use-cases</a>
+                <a href="/resources/">Resource Map</a>
+                <!--<a href="/resources/common/use-cases.html">Resource Map</a>-->
                 <a href="/resources/common/">Common Concepts & Questions</a>
-                <a href="/resources/guides/">Developer Guides</a>
-                <a href="/resources/importing-data/">SDK/API Documentation</a>
+                <!-- <a href="/resources/guides/">Guides</a> -->
+                <a href="/resources/importing-data/">Collecting Data</a>
+                <a href="/resources/analyzing-data/">Analyzing Data</a>
+                <a href="/resources/request-results/">Querying Results</a>
                 <a href="/resources/corp/">Support & About Qoncrete</a>
             </div>
         </div>
@@ -243,20 +246,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="pricing-payment-limits.html">
-            
-                <a href="pricing-payment-limits.html">
-            
-                    
-                    Pricing, Payment and Limits
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.9" data-path="use-cases.html">
+        <li class="chapter " data-level="1.2.8" data-path="use-cases.html">
             
                 <a href="use-cases.html">
             
@@ -269,7 +259,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="support.html">
+        <li class="chapter " data-level="1.2.9" data-path="support.html">
             
                 <a href="support.html">
             
@@ -695,6 +685,51 @@
             
         </li>
     
+        <li class="chapter " data-level="2.2" data-path="../request-results/">
+            
+                <a href="../request-results/">
+            
+                    
+                    Requesting Results
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../request-results/query-report.html">
+            
+                <a href="../request-results/query-report.html">
+            
+                    
+                    Querying a Report
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../request-results/query-report-examples.html">
+            
+                <a href="../request-results/query-report-examples.html">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
         
@@ -722,25 +757,12 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../running-on-premises/index.md">
-            
-                <span>
-            
-                    
-                    On-Premises & Private Cloud
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="../corp/">
+        <li class="chapter " data-level="4.1" data-path="../corp/">
             
                 <a href="../corp/">
             
                     
-                    Corp & Legal
+                    Support & About Qoncrete
             
                 </a>
             
@@ -749,7 +771,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.2.1" data-path="../corp/about.html">
+        <li class="chapter " data-level="4.1.1" data-path="../corp/about.html">
             
                 <a href="../corp/about.html">
             
@@ -762,7 +784,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2.2" data-path="../corp/team.md">
+        <li class="chapter " data-level="4.1.2" data-path="../corp/team.md">
             
                 <span>
             
@@ -775,7 +797,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2.3" data-path="../corp/support.html">
+        <li class="chapter " data-level="4.1.3" data-path="../corp/support.html">
             
                 <a href="../corp/support.html">
             
@@ -788,7 +810,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2.4" data-path="../corp/careers.md">
+        <li class="chapter " data-level="4.1.4" data-path="../corp/careers.md">
             
                 <span>
             
@@ -801,7 +823,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2.5" data-path="../corp/terms-of-service.md">
+        <li class="chapter " data-level="4.1.5" data-path="../corp/terms-of-service.md">
             
                 <span>
             
@@ -814,7 +836,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2.6" data-path="../corp/privacy.md">
+        <li class="chapter " data-level="4.1.6" data-path="../corp/privacy.md">
             
                 <span>
             
@@ -891,7 +913,7 @@
 <p>The creation of a report involves setting three options:</p>
 <ul>
 <li><strong>Time period</strong> - the length of time to bundle event data to act as a single data point.  If events are received every minute, they could be bundled together by the hour, or day, giving one the ability to make queries about larger spans of time.  Hourly temperature readings could be averaged over the day so as to make a line graph to spot larger temperature trends over weeks, for example. An additional option called &quot;timeless&quot; allows you to summarize all of your data in a single report, similar to common databases like MySQL or Mongodb. </li>
-<li><strong>Dimension (group-by) fields</strong> - which keys of the data source&apos;s <a href="events-data-retention.html">event</a> to bundle collections by to act as a single data point, time is always grouped by default.  A <code>puchase</code> event, for example, could be grouped by the &quot;store_city&quot; key to generate reports comparing revenue performance based on the store location throughout the country. Qoncrete also supports mulit-level grouping, so an event could be grouped using multiple keys (e.g. country, city, buyer) to easily &quot;drill down&quot; into the data for more fine tuned analysis.</li>
+<li><strong>Dimension (group-by) fields</strong> - which keys of the data source&apos;s <a href="events-data-retention.html">event</a> to bundle collections by to act as a single data point.  A <code>puchase</code> event, for example, could be grouped by the &quot;store_city&quot; key to generate reports comparing revenue performance based on the store location throughout the country. Qoncrete also supports mulit-level grouping, so an event could be grouped using multiple keys (e.g. country, city, buyer) to easily &quot;drill down&quot; into the data for more fine tuned analysis.  For time is always the first group by, if you define 2 group-bys, you will get 3 group-bys in fact. Traditionally, we also use level to represent the group-by we are focusing on, and level 0 means time group-by.</li>
 <li><strong>Metric (value) fields</strong> - which keys of the data source&apos;s <a href="events-data-retention.html">event</a> to perform the actual calculations on, along with the associated function. For example, a key called &quot;price&quot; could use the sum function to calculate the total revenue per country, city, and user. Qoncrete supports common functions like sum, average, median, unique count, minimum and maximum, first and last value, etc. <a href="accuracy-precision.html">Make sure to read about numbers accuracy and precision</a>.</li>
 </ul>
 <p>Reports are always real time, excluding perhaps a very small delay for indexing. Qoncrete indexes all the fields in your report automatically. This allows for real time bi-directional sorting on any field and robust API access to your data. </p>
@@ -938,7 +960,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sources and Reports","level":"1.2.3","depth":2,"next":{"title":"Accuracy and Precision","level":"1.2.4","depth":2,"path":"common/accuracy-precision.md","ref":"common/accuracy-precision.md","articles":[]},"previous":{"title":"Events and Retention","level":"1.2.2","depth":2,"path":"common/events-data-retention.md","ref":"common/events-data-retention.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":2},"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"favicon":"/static/favicon.png","variables":{},"title":"Qoncrete Resources","language":"en","gitbook":"*","description":"Qoncrete Resources, Documentation, Guides and more","direction":"ltr"},"file":{"path":"common/sources-reports.md","mtime":"2017-02-28T03:26:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-03T08:44:13.702Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Sources and Reports","level":"1.2.3","depth":2,"next":{"title":"Accuracy and Precision","level":"1.2.4","depth":2,"path":"common/accuracy-precision.md","ref":"common/accuracy-precision.md","articles":[]},"previous":{"title":"Events and Retention","level":"1.2.2","depth":2,"path":"common/events-data-retention.md","ref":"common/events-data-retention.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":2},"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"favicon":"/static/favicon.png","variables":{},"title":"Qoncrete Resources","language":"en","gitbook":"*","description":"Qoncrete Resources, Documentation, Guides and more","direction":"ltr"},"file":{"path":"common/sources-reports.md","mtime":"2017-03-24T06:13:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-07T08:37:33.120Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -8,7 +8,6 @@
 	* [Security and Reliability](common/security-reliability.md)
 	* [Data Access and API Keys](common/data-access-api-keys.md)
 	* [Datacenters and Network](common/datacenters-network.md)
-	* [Pricing, Payment and Limits](common/pricing-payment-limits.md)
 	* [Use Cases](common/use-cases.md)
 	* [Support](common/support.md)
 
@@ -51,13 +50,17 @@
 		* [Visualization SDK](analyzing-data/javascript-sdk.md)
 	* [API](analyzing-data/api.md)
 
+* [Requesting Results](request-results/index.md)
+	* [Querying a Report](request-results/query-report.md)
+	* [Examples](request-results/query-report-examples.md)
+
 
 * [Exporting Data](exporting-data/index.md)
 
 
-* [On-Premises & Private Cloud](running-on-premises/index.md)
+<!--- * [On-Premises & Private Cloud](running-on-premises/index.md) --->
 
-* [Corp & Legal](corp/index.md)
+* [Support & About Qoncrete](corp/index.md)
 	* [About Qoncrete](corp/about.md)
 	* [Team](corp/team.md)
 	* [Support](corp/support.md)
