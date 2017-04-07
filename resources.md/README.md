@@ -17,7 +17,6 @@ Questions?  Spot a mistake? Contact us at contact@qoncrete.com
 	* [Security and Reliability](common/security-reliability.md)
 	* [Data Access and API Keys](common/data-access-api-keys.md)
 	* [Datacenters and Network](common/datacenters.md)
-	* [Pricing, Payment and Limits](common/pricing-payment-limits.md)
 	* [Use Cases](common/use-cases.md)
 	* [Support](common/support.md)
 
@@ -63,7 +62,7 @@ Questions?  Spot a mistake? Contact us at contact@qoncrete.com
 
 <!--- * [On-Premises & Private Cloud](running-on-premises/index.md) --->
 
-* [Corp & Legal](corp/index.md)
+* [Support & About Qoncrete](corp/index.md)
 	* [About Qoncrete](corp/about.md)
 	<!--- * [Team](corp/team.md) --->
 	* [Support](corp/Support.md)

@@ -12,7 +12,7 @@ Example `purchase` event:
     "_qtime":"2016-04-09T00:00:00.000Z",
     "buyer":"Bill Brigsby",
     "items":[
-        {"amount":12, "item": roses, "price": 14.99}, 
+        {"amount":12, "item": "roses", "price": 14.99}, 
         {"amount": 1, "item": "20 pc chocolate", "price": 9.99}, 
         {"amount": 99, "item": "problems", "price": 0.99}
     ],
